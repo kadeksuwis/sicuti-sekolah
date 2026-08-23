@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CutiController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [CutiController::class, 'preview']);
+
+Route::get('/preview-cuti', [CutiController::class, 'preview']);
